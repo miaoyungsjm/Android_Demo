@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  SQLite Operate  "/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_createDatabase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="create database"/>
+
+    <Button
+        android:id="@+id/addDataToDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add data to db" />
+
+    <Button
+        android:id="@+id/updateDataToDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update data to db"/>
+
+    <Button
+        android:id="@+id/deleteDataToDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete data to db"/>
+
+    <Button
+        android:id="@+id/queryDataToDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="query data to db"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  ContentProvider Operate  "/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addDataToCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add data to cp" />
+
+    <Button
+        android:id="@+id/updateDataToCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update data to cp"/>
+
+    <Button
+        android:id="@+id/deleteDataToCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete data to cp"/>
+
+    <Button
+        android:id="@+id/queryDataToCP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="query data to cp"/>
+
+</LinearLayout>
