@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.example.viewtest.MyLinearLayout
+        android:id="@+id/mLin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/grey">
+
+        <com.example.viewtest.MyButton
+        android:id="@+id/mBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mBtn" />
+
+        <Button
+            android:id="@+id/Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Btn"/>
+    </com.example.viewtest.MyLinearLayout>
+
+
+</LinearLayout>
