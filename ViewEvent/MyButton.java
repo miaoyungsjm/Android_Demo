@@ -30,13 +30,13 @@ public class MyButton extends AppCompatButton{
         switch (event.getAction())
         {
             case MotionEvent.ACTION_DOWN:
-                Log.v(TAG, "onTouchEvent;----> ACTION_DOWN");
+                Log.v(TAG, "onTouchEvent ----> ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.v(TAG, "onTouchEvent;----> ACTION_MOVE");
+                Log.v(TAG, "onTouchEvent ----> ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.v(TAG, "onTouchEvent;----> ACTION_UP");
+                Log.v(TAG, "onTouchEvent ----> ACTION_UP");
                 break;
             default:
                 break;
@@ -47,6 +47,6 @@ public class MyButton extends AppCompatButton{
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         Log.v(TAG, "dispatchTouchEvent");
-        return super.dispatchTouchEvent(event);    // false
+        return super.dispatchTouchEvent(event); //false;
     }
 }

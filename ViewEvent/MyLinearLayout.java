@@ -11,16 +11,8 @@ import android.widget.LinearLayout;
 public class MyLinearLayout extends LinearLayout{
     private static final String TAG = "MyLinearLayout";
 
-    public MyLinearLayout(Context context) {
-        super(context);
-    }
-
     public MyLinearLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    public MyLinearLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
     }
 
     @Override
@@ -29,13 +21,13 @@ public class MyLinearLayout extends LinearLayout{
         switch (event.getAction())
         {
             case MotionEvent.ACTION_DOWN:
-                Log.v(TAG, "onTouchEvent;----> ACTION_DOWN");
+                Log.v(TAG, "onTouchEvent ----> ACTION_DOWN");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.v(TAG, "onTouchEvent;----> ACTION_MOVE");
+                Log.v(TAG, "onTouchEvent ----> ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.v(TAG, "onTouchEvent;----> ACTION_UP");
+                Log.v(TAG, "onTouchEvent ----> ACTION_UP");
                 break;
             default:
                 break;
@@ -52,7 +44,7 @@ public class MyLinearLayout extends LinearLayout{
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.v(TAG, "onInterceptTouchEvent");
-        return super.onInterceptTouchEvent(ev);     // true
+        return super.onInterceptTouchEvent(ev); //true;
     }
 
     @Override

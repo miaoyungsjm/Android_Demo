@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG1 = "MyLinearLayout";
     private static final String TAG2 = "MyButton";
-    private static final String TAG3 = "Button";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         mLin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG1, "OnClick");
+                Log.v(TAG1, "OnClick Lin");
             }
         });
 
@@ -31,48 +30,44 @@ public class MainActivity extends AppCompatActivity {
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG2, "OnClick");
+                Log.v(TAG2, "OnClick Btn");
             }
         });
 
+        mBtn.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Log.v(TAG2, "OnLongClick Btn");
+                return false;
+            }
+        });
 
         // onTouch > onLongClick > onClick
-        Button Btn = (Button) findViewById(R.id.Btn);
-        Btn.setOnTouchListener(new View.OnTouchListener() {
+        mBtn.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction())
                 {
                     case MotionEvent.ACTION_DOWN:
-                        Log.v(TAG3, "onTouchEvent;----> ACTION_DOWN");
+                        Log.v(TAG2, "onTouch ----> ACTION_DOWN");
                         break;
                     case MotionEvent.ACTION_MOVE:
-                        Log.v(TAG3, "onTouchEvent;----> ACTION_MOVE");
+                        Log.v(TAG2, "onTouch ----> ACTION_MOVE");
                         break;
                     case MotionEvent.ACTION_UP:
-                        Log.v(TAG3, "onTouchEvent;----> ACTION_UP");
+                        Log.v(TAG2, "onTouch ----> ACTION_UP");
                         break;
                     default:
                         break;
                 }
-                return false;    // 默认返回 false ，true 屏蔽 onClick
-            }
-        });
-
-        Btn.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Log.v(TAG3, "OnLongClick Btn");
                 return false;
+                // return true;
+                // dispatchTouchEvent(MotionEvent event) return true 消费事件，
+                // 不再触发 onTouchEvent(MotionEvent event)
             }
         });
 
-        Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.v(TAG3, "OnClick Btn");
-            }
-        });
+
     }
 }

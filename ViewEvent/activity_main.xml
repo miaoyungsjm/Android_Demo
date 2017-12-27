@@ -18,11 +18,6 @@
         android:layout_height="wrap_content"
         android:text="mBtn" />
 
-        <Button
-            android:id="@+id/Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Btn"/>
     </com.example.viewtest.MyLinearLayout>
 
 
